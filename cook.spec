@@ -6,7 +6,7 @@ Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
 Version:	2.25
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ URL:		http://www.canb.auug.org.au/~millerp/cook/
 BuildRequires:	bison
 BuildRequires:	gettext-devel
 BuildRequires:	groff
+BuildRequires:	sharutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
