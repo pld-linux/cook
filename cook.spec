@@ -125,11 +125,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en
 install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf README lib/en/*.{ps,txt}
-
 %files
 %defattr(644,root,root,755)
-%doc *.gz lib/en/*.txt.gz 
+%doc README lib/en/*.{ps,txt} 
 %attr(0755,root,root) %{_bindir}/*
 %{_libdir}/cook
 %{_datadir}/cook
