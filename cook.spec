@@ -121,21 +121,23 @@ Dokumentacja do cooka w formacie PostScript.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_libdir}/cook/en/LC_MESSAGES
-install -d $RPM_BUILD_ROOT%{_datadir}/locale
-install -d $RPM_BUILD_ROOT%{_datadir}/cook/en
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/cook/en/LC_MESSAGES,%{_mandir}/man1} \
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_datadir}/{locale,cook/en}}
+
 ln -s $RPM_BUILD_ROOT%{_mandir}/man1 $RPM_BUILD_ROOT%{_datadir}/cook/en/man1
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+
+install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}/cook.gif
+
 mv $RPM_BUILD_ROOT%{_libdir}/cook/en $RPM_BUILD_ROOT%{_datadir}/locale/
 rm -r $RPM_BUILD_ROOT%{_datadir}/cook/en
-install -D cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}/cook.gif
 
 %find_lang %{name} --with-gnome --all-name
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -148,6 +150,3 @@ install -D cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}/cook.gif
 %files doc-ps
 %defattr(644,root,root,755)
 %doc lib/en/*.ps
-
-%clean
-rm -rf $RPM_BUILD_ROOT
