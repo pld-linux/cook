@@ -52,9 +52,9 @@ interpret tab differently to 8 space characters!
 
 %description -l pl
 
-Cook jest narzêdziem do tworzenia plików. Podaje mu siê listê plików do 
+Cook jest narzêdziem do tworzenia plików. Podaje mu siê listê plików do
 utworzenia oraz regu³y wyja¶niaj±ce jak je utworzyæ. Ka¿dy nietrywialny
-program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia 
+program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia
 ró¿nych plików, jak np. plików nag³ówkowych. Cook udostêpnia mechanizmy
 pozwalaj±cy je zdefiniowaæ.
 
@@ -134,7 +134,7 @@ install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %files
 %defattr(644,root,root,755)
-%doc README lib/en/*.{ps,txt} 
+%doc README lib/en/*.{ps,txt}
 %attr(0755,root,root) %{_bindir}/*
 %{_libdir}/cook
 %{_datadir}/cook
