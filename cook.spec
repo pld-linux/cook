@@ -1,7 +1,7 @@
 Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
-Version:	2.19
+Version:	2.21
 Release:	2
 License:	GPL
 Group:		Development/Building
@@ -118,11 +118,24 @@ Dokumentacja do cooka w formacie PostScript.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_libdir}
+install -d $RPM_BUILD_ROOT%{_libdir}/cook
+install -d $RPM_BUILD_ROOT%{_libdir}/cook/en/
+install -d $RPM_BUILD_ROOT%{_libdir}/cook/en/LC_MESSAGES
+install -d $RPM_BUILD_ROOT%{_datadir}
+install -d $RPM_BUILD_ROOT%{_datadir}/cook
+install -d $RPM_BUILD_ROOT%{_datadir}/cook/en
+install -d $RPM_BUILD_ROOT%{_datadir}
+ln -s $RPM_BUILD_ROOT%{_mandir}/man1 $RPM_BUILD_ROOT%{_datadir}/cook/en/man1
+install -d $RPM_BUILD_ROOT%{_mandir}
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} RPM_BUILD_ROOT=$RPM_BUILD_ROOT install
-rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en
-
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+#rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en
+rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en/man1
 install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %files
@@ -136,7 +149,7 @@ install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %files doc-ps
 %defattr(644,root,root,755)
-%doc lib/en/*.ps.gz
+%doc %{_datadir}/doc/%{name}-%{version}/*.ps.gz
 
 %clean
 rm -rf $RPM_BUILD_ROOT
