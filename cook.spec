@@ -1,13 +1,20 @@
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make test"
+#
 Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
-Version:	2.21
-Release:	3
+Version:	2.25
+Release:	1
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
-# Source0-md5:	767b152dbfc6afb93fc94326cab67227
+# Source0-md5:	fd116da31c59c04abe41519fc131b504
 URL:		http://www.canb.auug.org.au/~millerp/cook/
+BuildRequires:	bison
+BuildRequires:	gettext-devel
+BuildRequires:	groff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -107,8 +114,10 @@ Dokumentacja do cooka w formacie PostScript.
 %setup -q
 
 %build
-%configure2_13
+%configure
 %{__make}
+
+%{?with_tests:%{__make} sure}
 
 %install
 rm -rf $RPM_BUILD_ROOT
