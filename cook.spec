@@ -49,6 +49,55 @@ takes a day or two to learn, it is much more powerful and a bit more
 intuitave than the traditional make(1) tool. And Cook doesn't
 interpret tab differently to 8 space characters!
 
+%description -l pl
+
+Cook jest narzêdziem do tworzenia plików. Podaje mu siê listê plików do 
+utworzenia oraz regu³y wyja¶niaj±ce jak je utworzyæ. Ka¿dy nietrywialny
+program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia 
+ró¿nych plików, jak np. plików nag³ówkowych. Cook udostêpnia mechanizmy
+pozwalaj±cy je zdefiniowaæ.
+
+Tworz±c i rozwija±c program zazwyczaj modyfikuje siê pliki, z których
+siê sk³ada. Cook bada daty ostatniej modyfikacji sprawdzaj±c, czy
+zmieni³y siê zale¿no¶ci; je¶li tak, pliki powinny zostaæ zaktualizowane.
+
+Cook umo¿liwia równie¿ definiowanie niejawnych regu³, pozwalaj±c
+u¿ytkownikom wyszczególniæ metody tworzenia plików o podanym
+rozszerzeniu z pliku o innym rozszerzeniu (np. jak utworzyæ
+plik.o z plik.c).
+
+- Cook jest zamiennikiem tradycyjnego narzêdzia make(1). Jednak przed
+u¿yciem plików Makefile z cookiem, nale¿y wcze¶niej przekszta³ciæ
+je do formatu rozumianego przez cooka przy u¿yciu narzêdzia make2cook
+dostarczanego wraz z dystrybucj±.
+
+- Cook posiada prosty lecz potê¿ny jêzyk opisowy, z wieloma wbudowanymi
+  funkcjami, dzieki czemu mo¿na podawaæ i manipulowaæ skomplikowanymi
+  specyfikacjami nazw plików bez utraty czytelno¶ci i wydajno¶ci.
+
+- Oprócz daty ostatniej modyfikacji, cook pozwala korzystaæ z fingerprintów.
+  Dziêki temu mo¿na zoptymalizowaæ proces budowania nie uciekaj±c siê
+  do nienaturalnych regu³.
+
+- Cook potrafi przeprowadziæ proces budowania w wielu równoleg³ych
+  w±tkach, obs³uguj±c prawid³owo regu³y jednow±tkowe. Mo¿na
+  przeprowadziæ rozproszone budowanie w sieci LAN, przekszta³caj±c
+  lokaln± sieæ w wirtualn± maszynê do budowania równoleg³ego.
+
+Je¶li tworzysz program od zera i planujesz napisaæ Makefile,
+przemysl mozliwo¶æ wykorzystania zamiast niego pliku cookbook.
+Choæ na naukê Cooka trzeba po¶wiêciæ dzieñ lub dwa, jest to
+narzedzie o wiele potê¿niejsze i znacznie bardziej intuicyjne ni¿
+tradycyjne make(1). Poza tym Cook nie traktuje inaczej TAB-a i
+o¶miu spacji!
+
+If you are putting together a source-code distribution and planning to
+write a makefile, consider writing a cookbook instead. Although Cook
+takes a day or two to learn, it is much more powerful and a bit more
+intuitave than the traditional make(1) tool. And Cook doesn't
+interpret tab differently to 8 space characters!
+
+
 %package doc-ps
 Summary:	Cook documentation, PostScript format
 Summary(pl):	Dokumentacja do cooka w formacie PostScript
