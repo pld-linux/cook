@@ -5,10 +5,8 @@ Version:	2.19
 Release:	1
 License:	GPL
 Group:		Development/Building
-Group(de):	Entwicklung/Bauen
-Group(pl):	Programowanie/Budowanie
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
-URL:		http://www.canb.auug.org.au/~millerp/cook
+URL:		http://www.canb.auug.org.au/~millerp/cook/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,16 +55,14 @@ utworzenia i przepisy, jak je tworzyæ.
 
 %package doc-ps
 Summary:	Cook documentation, PostScript format
-Summary(pl):	Dokumentacja do cook'a w formacie PostScript
+Summary(pl):	Dokumentacja do cooka w formacie PostScript
 Group:		Development/Building
-Group(de):	Entwicklung/Bauen
-Group(pl):	Programowanie/Budowanie
 
 %description doc-ps
 Cook documentation in PostScript format.
 
-%description -l pl doc-ps
-Dokumentacja do cook'a w formacie PostScript.
+%description doc-ps -l pl
+Dokumentacja do cooka w formacie PostScript.
 
 %prep
 %setup -q
