@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
+# Source0-md5:	767b152dbfc6afb93fc94326cab67227
 URL:		http://www.canb.auug.org.au/~millerp/cook/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
