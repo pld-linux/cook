@@ -2,7 +2,7 @@ Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
 Version:	2.21
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
@@ -57,7 +57,7 @@ program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia
 ró¿nych plików, jak np. plików nag³ówkowych. Cook udostêpnia mechanizmy
 pozwalaj±cy je zdefiniowaæ.
 
-Tworz±c i rozwija±c program zazwyczaj modyfikuje siê pliki, z których
+Tworz±c i rozwijaj±c program zazwyczaj modyfikuje siê pliki, z których
 siê sk³ada. Cook bada daty ostatniej modyfikacji sprawdzaj±c, czy
 zmieni³y siê zale¿no¶ci; je¶li tak, pliki powinny zostaæ zaktualizowane.
 
@@ -72,7 +72,7 @@ je do formatu rozumianego przez cooka przy u¿yciu narzêdzia make2cook
 dostarczanego wraz z dystrybucj±.
 
 - Cook posiada prosty lecz potê¿ny jêzyk opisowy, z wieloma wbudowanymi
-  funkcjami, dzieki czemu mo¿na podawaæ i manipulowaæ skomplikowanymi
+  funkcjami, dziêki czemu mo¿na podawaæ i manipulowaæ skomplikowanymi
   specyfikacjami nazw plików bez utraty czytelno¶ci i wydajno¶ci.
 
 - Oprócz daty ostatniej modyfikacji, cook pozwala korzystaæ z fingerprintów.
@@ -85,18 +85,11 @@ dostarczanego wraz z dystrybucj±.
   lokaln± sieæ w wirtualn± maszynê do budowania równoleg³ego.
 
 Je¶li tworzysz program od zera i planujesz napisaæ Makefile,
-przemysl mozliwo¶æ wykorzystania zamiast niego pliku cookbook.
+przemy¶l mo¿liwo¶æ wykorzystania zamiast niego pliku cookbook.
 Choæ na naukê Cooka trzeba po¶wiêciæ dzieñ lub dwa, jest to
-narzedzie o wiele potê¿niejsze i znacznie bardziej intuicyjne ni¿
+narzêdzie o wiele potê¿niejsze i znacznie bardziej intuicyjne ni¿
 tradycyjne make(1). Poza tym Cook nie traktuje inaczej TAB-a i
 o¶miu spacji!
-
-If you are putting together a source-code distribution and planning to
-write a makefile, consider writing a cookbook instead. Although Cook
-takes a day or two to learn, it is much more powerful and a bit more
-intuitave than the traditional make(1) tool. And Cook doesn't
-interpret tab differently to 8 space characters!
-
 
 %package doc-ps
 Summary:	Cook documentation, PostScript format
