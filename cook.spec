@@ -6,7 +6,7 @@ Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
 Version:	2.25
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
@@ -115,7 +115,9 @@ Dokumentacja do cooka w formacie PostScript.
 
 %build
 %configure \
-	NLSDIR=%{_datadir}/locale
+	NLSDIR=%{_datadir}/locale \
+	ac_cv_lib_rx_main=no \
+	ac_cv_header_rxposix_h=no
 %{__make}
 
 %{?with_tests:%{__make} sure}
