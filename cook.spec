@@ -58,7 +58,6 @@ intuitave than the traditional make(1) tool. And Cook doesn't
 interpret tab differently to 8 space characters!
 
 %description -l pl
-
 Cook jest narzêdziem do tworzenia plików. Podaje mu siê listê plików do
 utworzenia oraz regu³y wyja¶niaj±ce jak je utworzyæ. Ka¿dy nietrywialny
 program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia
@@ -114,45 +113,41 @@ Dokumentacja do cooka w formacie PostScript.
 %setup -q
 
 %build
-%configure
+%configure \
+	NLSDIR=%{_datadir}/locale
 %{__make}
 
 %{?with_tests:%{__make} sure}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_libdir}
-install -d $RPM_BUILD_ROOT%{_libdir}/cook
-install -d $RPM_BUILD_ROOT%{_libdir}/cook/en/
 install -d $RPM_BUILD_ROOT%{_libdir}/cook/en/LC_MESSAGES
-install -d $RPM_BUILD_ROOT%{_datadir}
-install -d $RPM_BUILD_ROOT%{_datadir}/cook
+install -d $RPM_BUILD_ROOT%{_datadir}/locale
 install -d $RPM_BUILD_ROOT%{_datadir}/cook/en
-install -d $RPM_BUILD_ROOT%{_datadir}
 ln -s $RPM_BUILD_ROOT%{_mandir}/man1 $RPM_BUILD_ROOT%{_datadir}/cook/en/man1
-install -d $RPM_BUILD_ROOT%{_mandir}
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
-%{__make} RPM_BUILD_ROOT=$RPM_BUILD_ROOT install
-#rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en
-rm -rf $RPM_BUILD_ROOT%{_datadir}/cook/en/man1
-install cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}
+%{__make} install \
+	RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+mv $RPM_BUILD_ROOT%{_libdir}/cook/en $RPM_BUILD_ROOT%{_datadir}/locale/
+rm -r $RPM_BUILD_ROOT%{_datadir}/cook/en
+install -D cook.gif $RPM_BUILD_ROOT%{_pixmapsdir}/cook.gif
 
-%files
+%find_lang %{name} --with-gnome --all-name
+
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README lib/en/*.{ps,txt}
+%doc README lib/en/*.txt
 %attr(0755,root,root) %{_bindir}/*
-%{_libdir}/cook
 %{_datadir}/cook
 %{_mandir}/man*/*
 %{_pixmapsdir}/cook.gif
 
 %files doc-ps
 %defattr(644,root,root,755)
-%doc %{_datadir}/doc/%{name}-%{version}/*.ps.gz
+%doc lib/en/*.ps
 
 %clean
 rm -rf $RPM_BUILD_ROOT
