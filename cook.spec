@@ -2,7 +2,7 @@ Summary:	A file construction tool
 Summary(pl):	Narzêdzie do konstrukcji plików
 Name:		cook
 Version:	2.19
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
@@ -48,10 +48,6 @@ write a makefile, consider writing a cookbook instead. Although Cook
 takes a day or two to learn, it is much more powerful and a bit more
 intuitave than the traditional make(1) tool. And Cook doesn't
 interpret tab differently to 8 space characters!
-
-%description -l pl
-Cook jest narzêdziem do budowania plików. Podaje mu siê zbiór plików do
-utworzenia i przepisy, jak je tworzyæ.
 
 %package doc-ps
 Summary:	Cook documentation, PostScript format
