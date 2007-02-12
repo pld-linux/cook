@@ -3,7 +3,7 @@
 %bcond_without	tests	# don't perform "make test"
 #
 Summary:	A file construction tool
-Summary(pl.UTF-8):   Narzędzie do konstrukcji plików
+Summary(pl.UTF-8):	Narzędzie do konstrukcji plików
 Name:		cook
 Version:	2.25
 Release:	3
@@ -101,7 +101,7 @@ ośmiu spacji!
 
 %package doc-ps
 Summary:	Cook documentation, PostScript format
-Summary(pl.UTF-8):   Dokumentacja do cooka w formacie PostScript
+Summary(pl.UTF-8):	Dokumentacja do cooka w formacie PostScript
 Group:		Development/Building
 
 %description doc-ps
