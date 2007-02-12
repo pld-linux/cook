@@ -3,7 +3,7 @@
 %bcond_without	tests	# don't perform "make test"
 #
 Summary:	A file construction tool
-Summary(pl):	Narzêdzie do konstrukcji plików
+Summary(pl.UTF-8):   NarzÄ™dzie do konstrukcji plikÃ³w
 Name:		cook
 Version:	2.25
 Release:	3
@@ -58,56 +58,56 @@ takes a day or two to learn, it is much more powerful and a bit more
 intuitave than the traditional make(1) tool. And Cook doesn't
 interpret tab differently to 8 space characters!
 
-%description -l pl
-Cook jest narzêdziem do tworzenia plików. Podaje mu siê listê plików do
-utworzenia oraz regu³y wyja¶niaj±ce jak je utworzyæ. Ka¿dy nietrywialny
-program wymaga podjêcia pewnych dzia³añ koniecznych do utworzenia
-ró¿nych plików, jak np. plików nag³ówkowych. Cook udostêpnia mechanizmy
-pozwalaj±cy je zdefiniowaæ.
+%description -l pl.UTF-8
+Cook jest narzÄ™dziem do tworzenia plikÃ³w. Podaje mu siÄ™ listÄ™ plikÃ³w do
+utworzenia oraz reguÅ‚y wyjaÅ›niajÄ…ce jak je utworzyÄ‡. KaÅ¼dy nietrywialny
+program wymaga podjÄ™cia pewnych dziaÅ‚aÅ„ koniecznych do utworzenia
+rÃ³Å¼nych plikÃ³w, jak np. plikÃ³w nagÅ‚Ã³wkowych. Cook udostÄ™pnia mechanizmy
+pozwalajÄ…cy je zdefiniowaÄ‡.
 
-Tworz±c i rozwijaj±c program zazwyczaj modyfikuje siê pliki, z których
-siê sk³ada. Cook bada daty ostatniej modyfikacji sprawdzaj±c, czy
-zmieni³y siê zale¿no¶ci; je¶li tak, pliki powinny zostaæ zaktualizowane.
+TworzÄ…c i rozwijajÄ…c program zazwyczaj modyfikuje siÄ™ pliki, z ktÃ³rych
+siÄ™ skÅ‚ada. Cook bada daty ostatniej modyfikacji sprawdzajÄ…c, czy
+zmieniÅ‚y siÄ™ zaleÅ¼noÅ›ci; jeÅ›li tak, pliki powinny zostaÄ‡ zaktualizowane.
 
-Cook umo¿liwia równie¿ definiowanie niejawnych regu³, pozwalaj±c
-u¿ytkownikom wyszczególniæ metody tworzenia plików o podanym
-rozszerzeniu z pliku o innym rozszerzeniu (np. jak utworzyæ
+Cook umoÅ¼liwia rÃ³wnieÅ¼ definiowanie niejawnych reguÅ‚, pozwalajÄ…c
+uÅ¼ytkownikom wyszczegÃ³lniÄ‡ metody tworzenia plikÃ³w o podanym
+rozszerzeniu z pliku o innym rozszerzeniu (np. jak utworzyÄ‡
 plik.o z plik.c).
 
-- Cook jest zamiennikiem tradycyjnego narzêdzia make(1). Jednak przed
-u¿yciem plików Makefile z cookiem, nale¿y wcze¶niej przekszta³ciæ
-je do formatu rozumianego przez cooka przy u¿yciu narzêdzia make2cook
-dostarczanego wraz z dystrybucj±.
+- Cook jest zamiennikiem tradycyjnego narzÄ™dzia make(1). Jednak przed
+uÅ¼yciem plikÃ³w Makefile z cookiem, naleÅ¼y wczeÅ›niej przeksztaÅ‚ciÄ‡
+je do formatu rozumianego przez cooka przy uÅ¼yciu narzÄ™dzia make2cook
+dostarczanego wraz z dystrybucjÄ….
 
-- Cook posiada prosty lecz potê¿ny jêzyk opisowy, z wieloma wbudowanymi
-  funkcjami, dziêki czemu mo¿na podawaæ i manipulowaæ skomplikowanymi
-  specyfikacjami nazw plików bez utraty czytelno¶ci i wydajno¶ci.
+- Cook posiada prosty lecz potÄ™Å¼ny jÄ™zyk opisowy, z wieloma wbudowanymi
+  funkcjami, dziÄ™ki czemu moÅ¼na podawaÄ‡ i manipulowaÄ‡ skomplikowanymi
+  specyfikacjami nazw plikÃ³w bez utraty czytelnoÅ›ci i wydajnoÅ›ci.
 
-- Oprócz daty ostatniej modyfikacji, cook pozwala korzystaæ z fingerprintów.
-  Dziêki temu mo¿na zoptymalizowaæ proces budowania nie uciekaj±c siê
-  do nienaturalnych regu³.
+- OprÃ³cz daty ostatniej modyfikacji, cook pozwala korzystaÄ‡ z fingerprintÃ³w.
+  DziÄ™ki temu moÅ¼na zoptymalizowaÄ‡ proces budowania nie uciekajÄ…c siÄ™
+  do nienaturalnych reguÅ‚.
 
-- Cook potrafi przeprowadziæ proces budowania w wielu równoleg³ych
-  w±tkach, obs³uguj±c prawid³owo regu³y jednow±tkowe. Mo¿na
-  przeprowadziæ rozproszone budowanie w sieci LAN, przekszta³caj±c
-  lokaln± sieæ w wirtualn± maszynê do budowania równoleg³ego.
+- Cook potrafi przeprowadziÄ‡ proces budowania w wielu rÃ³wnolegÅ‚ych
+  wÄ…tkach, obsÅ‚ugujÄ…c prawidÅ‚owo reguÅ‚y jednowÄ…tkowe. MoÅ¼na
+  przeprowadziÄ‡ rozproszone budowanie w sieci LAN, przeksztaÅ‚cajÄ…c
+  lokalnÄ… sieÄ‡ w wirtualnÄ… maszynÄ™ do budowania rÃ³wnolegÅ‚ego.
 
-Je¶li tworzysz program od zera i planujesz napisaæ Makefile,
-przemy¶l mo¿liwo¶æ wykorzystania zamiast niego pliku cookbook.
-Choæ na naukê Cooka trzeba po¶wiêciæ dzieñ lub dwa, jest to
-narzêdzie o wiele potê¿niejsze i znacznie bardziej intuicyjne ni¿
+JeÅ›li tworzysz program od zera i planujesz napisaÄ‡ Makefile,
+przemyÅ›l moÅ¼liwoÅ›Ä‡ wykorzystania zamiast niego pliku cookbook.
+ChoÄ‡ na naukÄ™ Cooka trzeba poÅ›wiÄ™ciÄ‡ dzieÅ„ lub dwa, jest to
+narzÄ™dzie o wiele potÄ™Å¼niejsze i znacznie bardziej intuicyjne niÅ¼
 tradycyjne make(1). Poza tym Cook nie traktuje inaczej TAB-a i
-o¶miu spacji!
+oÅ›miu spacji!
 
 %package doc-ps
 Summary:	Cook documentation, PostScript format
-Summary(pl):	Dokumentacja do cooka w formacie PostScript
+Summary(pl.UTF-8):   Dokumentacja do cooka w formacie PostScript
 Group:		Development/Building
 
 %description doc-ps
 Cook documentation in PostScript format.
 
-%description doc-ps -l pl
+%description doc-ps -l pl.UTF-8
 Dokumentacja do cooka w formacie PostScript.
 
 %prep
