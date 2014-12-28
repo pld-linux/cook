@@ -13,7 +13,7 @@ Source0:	http://www.canb.auug.org.au/~millerp/cook/%{name}-%{version}.tar.gz
 # Source0-md5:	fd116da31c59c04abe41519fc131b504
 URL:		http://www.canb.auug.org.au/~millerp/cook/
 BuildRequires:	bison
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	groff
 BuildRequires:	sharutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
